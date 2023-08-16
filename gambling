@@ -1,1 +1,24 @@
+import random
 
+def gambling_game():
+    print(f"Welcome to the Gambling Game!")
+    print("Enter a number between 1 and 10.")
+    print("Let's see what reward you get!\n")
+
+    # Get user input
+    user_input = int(input("Choose a number between 1 and 10 and get a chance to win!!"))
+
+    # Validate user input
+    if user_input < 1 or user_input > 10:
+        print("Invalid input. Please enter a number between 1 and 10.")
+        return
+
+    # Generate a random reward
+    reward = random.randint(1, 100)  # You can customize the reward range as per your preference
+
+    print(f"\nYou selected: {user_input}")
+    print(f"Your reward is: {reward} coins!")
+
+if __name__ == "__main__":
+    gambling_game()
+ 
